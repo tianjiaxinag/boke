@@ -1,0 +1,509 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="小田的博客" href="https://tianjiaxinag.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="小田的博客" href="https://tianjiaxinag.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="小田的博客" href="https://tianjiaxinag.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://tianjiaxinag.github.io/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">
+
+
+
+  <title>
+Vue3基础学习 |
+小田博客 = 小田的博客</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Vue3基础学习
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-04-19 16:46:07">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-19T16:46:07+08:00">2023-04-19</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">小田博客</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://tianjiaxinag.github.io/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/touxiang.jpeg">
+    <meta itemprop="name" content="小田">
+    <meta itemprop="description" content=", 一个前端萌新的自我救赎">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="小田的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="快速搭建vue3项目"><a href="#快速搭建vue3项目" class="headerlink" title="快速搭建vue3项目"></a>快速搭建vue3项目</h2><h4 id="vue2的项目搭建相信大家都很熟悉了-我在下面简单说明一下"><a href="#vue2的项目搭建相信大家都很熟悉了-我在下面简单说明一下" class="headerlink" title="vue2的项目搭建相信大家都很熟悉了,我在下面简单说明一下"></a>vue2的项目搭建相信大家都很熟悉了,我在下面简单说明一下</h4><p>首先安装<span class="exturl" data-url="aHR0cHM6Ly9jbGkudnVlanMub3JnL3poL2d1aWRlLw==">vue-cli</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>如果下载比较慢的话可以切换淘宝源镜像</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=<span class="attr">https</span>:<span class="comment">//registry.npm.taobao.org --disturl=https://npm.taobao.org/mirrors/node</span></span><br></pre></td></tr></table></figure>
+
+<p>开始搭建vue项目</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create <span class="string">&#x27;项目名&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以得到一个快速搭建的vue项目了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run serve   <span class="comment">//运行项目</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="了解vue3创建方式"><a href="#了解vue3创建方式" class="headerlink" title="了解vue3创建方式"></a>了解vue3创建方式</h3><p>创建vue3我们会优先使用到另一个搭建工具<span class="exturl" data-url="aHR0cHM6Ly92aXRlanMuY24v">vite</span></p>
+<p>什么是<code>vite</code>?</p>
+<p><code>vite</code>是尤雨溪团队开发的新一代前端构建工具,想要取代[<strong>webpack</strong>]</p>
+<p><code>vite</code>的优点</p>
+<ul>
+<li>可以快速启动项目,打包体积更小</li>
+<li>Vite根目录即以当前工作目录作为根目录启动开发服务器</li>
+<li>Vite能够处理依赖管理，解析根目录之外位置的文件。</li>
+<li>更好的支持<code>Ts</code>开发</li>
+</ul>
+<p>快速使用<code>vite</code>创建项目,可以参考<span class="exturl" data-url="aHR0cHM6Ly9jbi52aXRlanMuZGV2L2d1aWRlLw==">官方文档</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm create vite    <span class="comment">//使用vite快速创建项目</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="vue2和vue3的区别"><a href="#vue2和vue3的区别" class="headerlink" title="vue2和vue3的区别"></a>vue2和vue3的区别</h3><h4 id="一-vue2和vue3双向数据绑定的原理区别"><a href="#一-vue2和vue3双向数据绑定的原理区别" class="headerlink" title="一: vue2和vue3双向数据绑定的原理区别"></a>一: vue2和vue3双向数据绑定的原理区别</h4><p>vue2的双向数据绑定是利用ES5的一个API Object.definePropert()对数据进行劫持</p>
+<p>结合发布订阅者模式的方式来实现的</p>
+<p>vue3是使用proxy替换掉了 Object.definePropert()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">proxy的优势</span><br><span class="line">可以直接监听数组类型的数据变化</span><br><span class="line">性能提升</span><br><span class="line">监听的目标为对象本身,不需要像Object.definePropert()一样遍历每个属性,有一定的性能提升,可以直接实现对象属性的新增/删除</span><br><span class="line"></span><br><span class="line">vue2对象删除添加属性视图不会直接更新还需要使用 $set()方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-根节点不同"><a href="#二-根节点不同" class="headerlink" title="二: 根节点不同"></a>二: 根节点不同</h4><p>vue2 只支持一个根节点</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">       &lt;<span class="selector-tag">div</span>&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>vue3 在组件中支持多个根节点</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">span</span>&gt;&lt;/<span class="selector-tag">span</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">span</span>&gt;&lt;/<span class="selector-tag">span</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-v-for和v-if的优先级"><a href="#三-v-for和v-if的优先级" class="headerlink" title="三: v-for和v-if的优先级"></a>三: v-for和v-if的优先级</h4><p>vue2</p>
+<p>最好不要把v-if和v-for同时用在一个元素上,这样会带来性能的浪费(每次都要先渲染才会进行条件的判断) v-for的优先级高于v-if</p>
+<p>vue3</p>
+<p>v-if的优先级高于v-for 如果v-if不成立就不会进行v-for的循环</p>
+<h4 id="四-生命周期的变化"><a href="#四-生命周期的变化" class="headerlink" title="四: 生命周期的变化"></a>四: 生命周期的变化</h4><p>vue2—–vue3</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate  -&gt; <span class="title function_">setup</span>()	开始创建组件之前，创建的是data和method</span><br><span class="line">created       -&gt; <span class="title function_">setup</span>()</span><br><span class="line">beforeMount   -&gt; onBeforeMount	组件挂载到节点上之前执行的函数。</span><br><span class="line">mounted       -&gt; onMounted	组件挂载完成后执行的函数</span><br><span class="line">beforeUpdate  -&gt; onBeforeUpdate	组件更新之前执行的函数。</span><br><span class="line">updated       -&gt; onUpdated	组件更新完成之后执行的函数。</span><br><span class="line">beforeDestroy -&gt; onBeforeUnmount	组件挂载到节点上之前执行的函数。</span><br><span class="line">destroyed     -&gt; onUnmounted	组件卸载之前执行的函数。dszhuoyi</span><br><span class="line">activated     -&gt; onActivated	组件卸载完成后执行的函数</span><br><span class="line">deactivated   -&gt; onDeactivated</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="常用组合式API-重点"><a href="#常用组合式API-重点" class="headerlink" title="常用组合式API(重点)"></a><code>常用组合式API(重点)</code></h3><h4 id="setup"><a href="#setup" class="headerlink" title="setup"></a><code>setup</code></h4>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-04-19 16:47:00" itemprop="dateModified" datetime="2023-04-19T16:47:00+08:00">2023-04-19</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="小田 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="小田 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="小田 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>小田 <i class="ic i-at"><em>@</em></i>小田的博客
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://tianjiaxinag.github.io/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Vue3基础学习">https://tianjiaxinag.github.io/2023/04/19/vue3基础学习/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/04/10/js%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4baakhj20zk0m8h5q.jpg" title="数组对象常用方法">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>数组对象常用方法</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/04/19/react%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="React学习">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>React学习</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">快速搭建vue3项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vue2%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E7%9B%B8%E4%BF%A1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E7%86%9F%E6%82%89%E4%BA%86-%E6%88%91%E5%9C%A8%E4%B8%8B%E9%9D%A2%E7%AE%80%E5%8D%95%E8%AF%B4%E6%98%8E%E4%B8%80%E4%B8%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">vue2的项目搭建相信大家都很熟悉了,我在下面简单说明一下</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3vue3%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">了解vue3创建方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue2%E5%92%8Cvue3%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">vue2和vue3的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-vue2%E5%92%8Cvue3%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E7%9A%84%E5%8E%9F%E7%90%86%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.1.</span> <span class="toc-text">一: vue2和vue3双向数据绑定的原理区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E6%A0%B9%E8%8A%82%E7%82%B9%E4%B8%8D%E5%90%8C"><span class="toc-number">1.2.2.</span> <span class="toc-text">二: 根节点不同</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-v-for%E5%92%8Cv-if%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.2.3.</span> <span class="toc-text">三: v-for和v-if的优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-number">1.2.4.</span> <span class="toc-text">四: 生命周期的变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%BB%84%E5%90%88%E5%BC%8FAPI-%E9%87%8D%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">常用组合式API(重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setup"><span class="toc-number">1.3.1.</span> <span class="toc-text">setup</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="小田"
+      data-src="/images/touxiang.jpeg">
+  <p class="name" itemprop="name">小田</p>
+  <div class="description" itemprop="description">一个前端萌新的自我救赎</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-主页"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/04/10/js%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/04/19/react%E5%AD%A6%E4%B9%A0/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/react%E5%AD%A6%E4%B9%A0/" title="React学习">React学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Vue3基础学习">Vue3基础学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/css%E6%A0%B7%E5%BC%8F%E4%B9%8B%E9%80%89%E6%8B%A9%E5%99%A8/" title="类选择器">类选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/react%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="React基础学习">React基础学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/uniapp%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85%E5%AF%8C%E6%96%87%E6%9C%AC%E8%BD%AC%E6%8D%A2/" title="富文本转换">富文本转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/js%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="数组对象常用方法">数组对象常用方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/04/%E5%90%8E%E5%8F%B0%E5%95%86%E5%9F%8E%E7%B3%BB%E7%BB%9F/" title="后台管理系统">后台管理系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/bug%E6%96%87%E6%A1%A3/" title="vue常见问题">vue常见问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/flex%E5%B8%83%E5%B1%80/" title="flex布局">flex布局</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">小田 @ 小田博客</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/04/19/vue3基础学习/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

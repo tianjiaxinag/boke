@@ -1,0 +1,535 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="小田的博客" href="https://tianjiaxinag.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="小田的博客" href="https://tianjiaxinag.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="小田的博客" href="https://tianjiaxinag.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://tianjiaxinag.github.io/2023/04/19/react%E5%AD%A6%E4%B9%A0/">
+
+
+
+  <title>
+React学习 |
+小田博客 = 小田的博客</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">React学习
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-04-19 16:46:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-19T16:46:12+08:00">2023-04-19</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">小田博客</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://tianjiaxinag.github.io/2023/04/19/react%E5%AD%A6%E4%B9%A0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/touxiang.jpeg">
+    <meta itemprop="name" content="小田">
+    <meta itemprop="description" content=", 一个前端萌新的自我救赎">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="小田的博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="react学习"><a href="#react学习" class="headerlink" title="react学习"></a>react学习</h1><h3 id="react的特点"><a href="#react的特点" class="headerlink" title="react的特点"></a>react的特点</h3><p>1,采用组件化模式,声明式编码,提高开发效率及组件复用率</p>
+<p>2,在react Native中可以使用React语法进行移动端开发</p>
+<p>3,使用虚拟DOM+优秀的Diffing算法,尽量减少与真实DOM的交互</p>
+<h3 id="分享一个可以暴力解决代码报红但是不影响效果的办法"><a href="#分享一个可以暴力解决代码报红但是不影响效果的办法" class="headerlink" title="分享一个可以暴力解决代码报红但是不影响效果的办法"></a>分享一个可以暴力解决代码报红但是不影响效果的办法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在报红的代码上面加上</span></span><br><span class="line"><span class="comment">// @ts-ignore   只忽略随后那一行代码的类型检测</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建react项目"><a href="#创建react项目" class="headerlink" title="创建react项目"></a>创建react项目</h3><p>npm init vite</p>
+<h3 id="安装reset-css"><a href="#安装reset-css" class="headerlink" title="安装reset-css"></a>安装reset-css</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i reset-scc</span><br></pre></td></tr></table></figure>
+
+<p>在main.tsx引入,样式初始化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;reset-css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) <span class="keyword">as</span> <span class="title class_">HTMLElement</span>).<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">React.StrictMode</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">React.StrictMode</span>&gt;</span></span>,</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="配置项目路径别名"><a href="#配置项目路径别名" class="headerlink" title="配置项目路径别名"></a>配置项目路径别名</h3><p>需要在vite.config.ts中添加配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">react</span>()],</span><br><span class="line">  <span class="attr">resolve</span>:&#123;</span><br><span class="line">    <span class="attr">alias</span>:&#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;src&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>引入path报红的,但是我们已经安装了node,就已经有了path模块.至少缺少了一些声明配置,所以需要安装关于node库的ts声明配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/node</span><br></pre></td></tr></table></figure>
+
+<p>如果还报红就把引入方式改成 import * as path from ‘path’</p>
+<p>配置完之后就可以使用@符号来引入需要使用的css&#x2F;js&#x2F;ts等</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./assets/style/global.scss&#x27;</span></span><br><span class="line"><span class="comment">//替换</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/assets/style/global.scss&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样的话不会有代码提示如果想要有代码提示引入需要在tsconfig.json里面配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;baseUrl&quot;</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line"><span class="string">&quot;paths&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;@/*&quot;</span>: [<span class="string">&quot;src/*&quot;</span>]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后在使用就会出现代码提示啦</p>
+<h3 id="配置antd-design样式自动按需引入"><a href="#配置antd-design样式自动按需引入" class="headerlink" title="配置antd design样式自动按需引入"></a>配置antd design样式自动按需引入</h3><p>antd的4x版本以上才支持</p>
+<p>安装插件 vite-plugin-style-import</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vite-plugin-style-<span class="keyword">import</span>@<span class="number">1.4</span><span class="number">.1</span> -D</span><br></pre></td></tr></table></figure>
+
+<p>在vite.config.ts中配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> react <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> styleImport,&#123; <span class="title class_">AntdResolve</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vite-plugin-style-import&#x27;</span></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">react</span>(),</span><br><span class="line">    <span class="title function_">styleImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolves</span>:[</span><br><span class="line">        <span class="title class_">AntdResolve</span>()</span><br><span class="line">      ]</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>:&#123;</span><br><span class="line">    <span class="attr">alias</span>:&#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>:path.<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;src&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>如果项目报错的话需要下载less</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i less@<span class="number">2.7</span><span class="number">.1</span> -D</span><br></pre></td></tr></table></figure>
+
+<h1 id="reactBug记录"><a href="#reactBug记录" class="headerlink" title="reactBug记录"></a>reactBug记录</h1><h3 id="项目中模块化引入样式报红找不到该模块但是又不影响项目运行解决方案"><a href="#项目中模块化引入样式报红找不到该模块但是又不影响项目运行解决方案" class="headerlink" title="项目中模块化引入样式报红找不到该模块但是又不影响项目运行解决方案"></a>项目中模块化引入样式报红找不到该模块但是又不影响项目运行解决方案</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在报红的代码上面加上</span></span><br><span class="line"><span class="comment">// @ts-ignore   只忽略随后那一行代码的类型检测</span></span><br></pre></td></tr></table></figure>
+
+<p>第二种: 在src &gt; typings.d.ts 文件新增内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="variable language_">module</span> <span class="string">&#x27;*.module.scss&#x27;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="attr">classes</span>: &#123;[<span class="attr">key</span>:string]:string&#125;;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> classes;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新增globals.d.ts 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="variable language_">module</span> <span class="string">&#x27;*.scss&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>在vite.config.ts文件中添加</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;include&quot;</span>: [<span class="string">&quot;./**/*.ts&quot;</span>],</span><br><span class="line"><span class="string">&quot;exclude&quot;</span>: [<span class="string">&quot;node_modules/**/*&quot;</span>],</span><br></pre></td></tr></table></figure>
+
+<p>这样就不会报红了</p>
+<h1 id="react的生命周期"><a href="#react的生命周期" class="headerlink" title="react的生命周期"></a>react的生命周期</h1><p>react的生命周期可以分为三个阶段: 挂载, 渲染, 卸载</p>
+<h1 id="react路由配置"><a href="#react路由配置" class="headerlink" title="react路由配置"></a>react路由配置</h1><h3 id="react-router-dom基础配置"><a href="#react-router-dom基础配置" class="headerlink" title="react-router-dom基础配置"></a>react-router-dom基础配置</h3><p>新建router文件夹创建index.tsx文件</p>
+<p>创建两个页面组件 Home和Login</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&quot;@/App&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Home</span> <span class="keyword">from</span> <span class="string">&quot;@/views/Home/Home&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Login</span> <span class="keyword">from</span> <span class="string">&quot;@/views/Login/Login&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&quot;react-router-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 两种路由模式的组件: BrowserRouter ( history模式 ), HashRouter( Hash模式 )</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">beseRouter</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;/* <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">App</span> /&gt;</span>&#125;&gt; */&#125;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Login</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/Home&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        &#123;/* <span class="tag">&lt;/<span class="name">Route</span>&gt;</span> */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> beseRouter;</span><br></pre></td></tr></table></figure>
+
+<p>在App.tsx页面添加配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入路由占位符 Outlet </span></span><br><span class="line"><span class="comment">//占位符类似于窗口,用来展示组件,有点像vue中的router-view</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Outlet</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Outlet</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在main.tsx页面添加配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入路由</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Router</span> <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span>    <span class="comment">//路由页面的地址</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) <span class="keyword">as</span> <span class="title class_">HTMLElement</span>).<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">React.StrictMode</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Router</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">React.StrictMode</span>&gt;</span></span>,</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样个基础的react的路由就配置好啦</p>
+<h1 id="react-Api学习"><a href="#react-Api学习" class="headerlink" title="react Api学习"></a>react Api学习</h1><h3 id="hook学习"><a href="#hook学习" class="headerlink" title="hook学习"></a>hook学习</h3><h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>,&#123;useState&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">const</span> [hook,setHook] = <span class="title function_">useState</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>useState(initialState)  initialState是初始值,可以任意设置</p>
+<p>hook,setHook 是变量名可以随便定义</p>
+<p>返回个数组  第一项hook, 是状态值 第二项sethook, 是一个更新状态的函数</p>
+<p>如果想改变hook的值可以使用setHook来改变</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [hook,setHook] = <span class="title function_">useState</span>(<span class="string">&#x27;我是第一个hook&#x27;</span>)</span><br><span class="line">  <span class="comment">// console.log(count,setCount)</span></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123; hook &#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span>=&gt;</span>&#123;</span></span><br><span class="line"><span class="language-xml">        setHook(&#x27;我变成第二个hook了&#x27;)</span></span><br><span class="line"><span class="language-xml">      &#125;&#125; &gt;点击变化<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<h4 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h4>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-04-19 16:47:21" itemprop="dateModified" datetime="2023-04-19T16:47:21+08:00">2023-04-19</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="小田 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="小田 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="小田 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>小田 <i class="ic i-at"><em>@</em></i>小田的博客
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://tianjiaxinag.github.io/2023/04/19/react%E5%AD%A6%E4%B9%A0/" title="React学习">https://tianjiaxinag.github.io/2023/04/19/react学习/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuibk9fj20zk0m8ay2.jpg" title="Vue3基础学习">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue3基础学习</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/04/19/react%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="React基础学习">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>React基础学习</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#react%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">react学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#react%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.0.1.</span> <span class="toc-text">react的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E6%9A%B4%E5%8A%9B%E8%A7%A3%E5%86%B3%E4%BB%A3%E7%A0%81%E6%8A%A5%E7%BA%A2%E4%BD%86%E6%98%AF%E4%B8%8D%E5%BD%B1%E5%93%8D%E6%95%88%E6%9E%9C%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-number">1.0.2.</span> <span class="toc-text">分享一个可以暴力解决代码报红但是不影响效果的办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAreact%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.0.3.</span> <span class="toc-text">创建react项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85reset-css"><span class="toc-number">1.0.4.</span> <span class="toc-text">安装reset-css</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE%E8%B7%AF%E5%BE%84%E5%88%AB%E5%90%8D"><span class="toc-number">1.0.5.</span> <span class="toc-text">配置项目路径别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEantd-design%E6%A0%B7%E5%BC%8F%E8%87%AA%E5%8A%A8%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5"><span class="toc-number">1.0.6.</span> <span class="toc-text">配置antd design样式自动按需引入</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reactBug%E8%AE%B0%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">reactBug记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E6%8A%A5%E7%BA%A2%E6%89%BE%E4%B8%8D%E5%88%B0%E8%AF%A5%E6%A8%A1%E5%9D%97%E4%BD%86%E6%98%AF%E5%8F%88%E4%B8%8D%E5%BD%B1%E5%93%8D%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.0.1.</span> <span class="toc-text">项目中模块化引入样式报红找不到该模块但是又不影响项目运行解决方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#react%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">3.</span> <span class="toc-text">react的生命周期</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#react%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">react路由配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#react-router-dom%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">4.0.1.</span> <span class="toc-text">react-router-dom基础配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#react-Api%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.</span> <span class="toc-text">react Api学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hook%E5%AD%A6%E4%B9%A0"><span class="toc-number">5.0.1.</span> <span class="toc-text">hook学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#useState"><span class="toc-number">5.0.1.1.</span> <span class="toc-text">useState</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#useEffect"><span class="toc-number">5.0.1.2.</span> <span class="toc-text">useEffect</span></a></li></ol></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="小田"
+      data-src="/images/touxiang.jpeg">
+  <p class="name" itemprop="name">小田</p>
+  <div class="description" itemprop="description">一个前端萌新的自我救赎</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-主页"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/04/19/react%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/uniapp%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85%E5%AF%8C%E6%96%87%E6%9C%AC%E8%BD%AC%E6%8D%A2/" title="富文本转换">富文本转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/css%E6%A0%B7%E5%BC%8F%E4%B9%8B%E9%80%89%E6%8B%A9%E5%99%A8/" title="类选择器">类选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/04/%E5%90%8E%E5%8F%B0%E5%95%86%E5%9F%8E%E7%B3%BB%E7%BB%9F/" title="后台管理系统">后台管理系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/react%E5%AD%A6%E4%B9%A0/" title="React学习">React学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/07/flex%E5%B8%83%E5%B1%80/" title="flex布局">flex布局</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/react%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="React基础学习">React基础学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/bug%E6%96%87%E6%A1%A3/" title="vue常见问题">vue常见问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/js%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="数组对象常用方法">数组对象常用方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/19/vue3%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Vue3基础学习">Vue3基础学习</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">小田 @ 小田博客</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/04/19/react学习/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
